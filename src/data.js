@@ -30,8 +30,15 @@ export const CORE_CONCEPTS = [
   },
 ];
 
+export const EXAMPLESTABLE = [
+  'Components',
+  'Jsx',
+  'Props',
+  'State'
+]
+
 export const EXAMPLES = {
-  components: {
+  Components: {
     title: 'Components',
     description:
       'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
@@ -40,7 +47,7 @@ function Welcome() {
   return <h1>Hello, World!</h1>;
 }`,
   },
-  jsx: {
+  Jsx: {
     title: 'JSX',
     description:
       'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
@@ -50,7 +57,7 @@ function Welcome() {
   <p>Time to learn React!</p>
 </div>`,
   },
-  props: {
+  Props: {
     title: 'Props',
     description:
       'Components accept arbitrary inputs called props. They are like function arguments.',
@@ -59,7 +66,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }`,
   },
-  state: {
+  State: {
     title: 'State',
     description:
       'State allows React components to change their output over time in response to user actions, network responses, and anything else.',
