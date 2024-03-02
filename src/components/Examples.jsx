@@ -4,6 +4,7 @@ import TabButton from "../components/TabButton.jsx";
 import Section from "./Section.jsx";
 
 import { EXAMPLES, EXAMPLESTABLE } from "../data.js";
+import Tabs from "./Tabs.jsx";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -29,8 +30,9 @@ export default function Examples() {
 
   return (
     <Section title="Examples" id="examples">
-      <menu>
-        {EXAMPLESTABLE.map((item) => (
+      <Tabs
+        ButtonsContainer="menu"
+        buttons={EXAMPLESTABLE.map((item) => (
           <TabButton
             key={item}
             isSelected={selectedTopic === item}
@@ -39,8 +41,9 @@ export default function Examples() {
             {item}
           </TabButton>
         ))}
-      </menu>
-      {tabContent}
+      >
+        {tabContent}
+      </Tabs>
     </Section>
   );
 }
